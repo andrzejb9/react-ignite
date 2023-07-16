@@ -8,6 +8,7 @@ import { useSelector } from "react-redux";
 function GameDetail() {
   //Data
   const { screen, game } = useSelector((state) => state.detail);
+
   return (
     <CardShadow>
       <Detail>
