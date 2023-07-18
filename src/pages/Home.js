@@ -9,6 +9,7 @@ import Game from "../components/Game";
 import styled from "styled-components";
 import { motion, AnimatePresence, LayoutGroup } from "framer-motion";
 import { useLocation } from "react-router-dom";
+import { fadeIn } from "../animations";
 
 function Home() {
   //get the current location
@@ -27,7 +28,7 @@ function Home() {
   );
 
   return (
-    <GameList>
+    <GameList variants={fadeIn} initial="hidden" animate="show">
       <LayoutGroup>
         <AnimatePresence>
           {pathId && <GameDetail pathId={pathId} />}
